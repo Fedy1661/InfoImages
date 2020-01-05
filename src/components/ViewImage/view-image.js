@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import Service from '../../service';
 
@@ -52,17 +52,16 @@ export default class ViewImage extends Component {
       <div className={`overlay`}>
         <div className="modal">
           <img src={modalInfo.url} alt={modalInfo.id} className="modal__image" />
-          {console.log(modalInfo.comments.length)}
           <div className="modal__comments">
             {modalInfo.comments.length > 0 ?
               modalInfo.comments.map(({ text, date, id }) => {
                 return (
-                  <>
-                    <div key={id} className="modal__comment">
+                  <Fragment key={id}>
+                    <div className="modal__comment">
                       <div className="modal__date">{this.formatDate(date)}</div>
                       <div className="modal__text">{text}</div>
                     </div>
-                  </>
+                  </Fragment>
                 )
               }) : <div className="modal__text">Комментарии отсутствуют.</div>
             }
