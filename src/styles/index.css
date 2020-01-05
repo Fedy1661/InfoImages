@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 728px;
+  margin: 0 auto;
+  text-align: center;
+}
+.title {
+  margin-top: 15px;
+  font-family: Roboto, sans-serif;
+  font-size: 36px;
+}
+.list-images {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.list-images__img {
+  width: 229px;
+  height: 142px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.modal {
+  display: inherit;
+  font-family: Roboto, sans-serif;
+  width: 619px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.modal__image {
+  width: 331px;
+  height: 225px;
+}
+.modal__comments {
+  width: 180px;
+  text-align: left;
+}
+.modal__date {
+  color: #999999;
+  font-size: 13px;
+}
+.modal__text {
+  font-size: 13px;
+  margin-top: 5px;
+}
+.modal__form {
+  margin-top: 30px;
+  width: 332px;
+}
+.modal__input {
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  font-family: Roboto;
+  font-size: 13px;
+  color: #cccccc;
+  display: block;
+  width: inherit;
+  padding: 7px 11px;
+}
+.modal__button {
+  background: #4997d0;
+  border-radius: 3px;
+  border: none;
+  font-family: Roboto;
+  font-size: 13px;
+  color: #ffffff;
+  height: 30px;
+  width: inherit;
+}
+.modal__close {
+  position: absolute;
+  top: 21px;
+  right: 21px;
+  cursor: pointer;
+}
